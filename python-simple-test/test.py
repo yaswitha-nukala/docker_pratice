@@ -1,1 +1,0 @@
-print("Hello guys , finally created a docker image from scratch")
