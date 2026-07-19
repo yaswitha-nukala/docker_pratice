@@ -1,6 +1,6 @@
 FROM ubuntu
 
-WORKDIR /app
+WORKDIR /app/dev
 
 COPY requirements.txt /app/
 COPY devops /app/
