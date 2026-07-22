@@ -1,5 +1,5 @@
-from ubuntu :latest
+from ubuntu:latest
 workdir /app
-copy ./app
-run apt-get update && apt-get istall -y python3 python3-pip
+COPY calculator.py /app/
+run apt-get update && apt-get install -y python3 python3-pip
 cmd ["python3","calculator.py"]
