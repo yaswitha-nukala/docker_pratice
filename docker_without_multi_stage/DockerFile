@@ -1,17 +1,5 @@
-###########################################
-# BASE IMAGE
-###########################################
-
-FROM ubuntu AS build
-
-RUN apt-get update && apt-get install -y python3 python3-pip
-
-# ENV GO111MODULE=off
-
-COPY . .
-
-# RUN CGO_ENABLED=0 go build -o /app .
-
-ENTRYPOINT ["/app"]
-
+from ubuntu :latest
+workdir /app
+copy ./app
+run apt-get update && apt-get istall -y python3 python3-pip
 cmd ["python3","calculator.py"]
